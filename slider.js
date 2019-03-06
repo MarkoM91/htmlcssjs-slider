@@ -46,7 +46,15 @@ function updateDots() {
     }
 
     console.log(activeInd);
+
+    var oldBot = $('.direct-link-wrapper > i.fas');
+    oldBot.removeClass("fas").addClass("far");
+
+    var dots = $('.direct-link-wrapper > i');
+    var nextDot = dots.eq(activeInd);
+        nextDot.addClass("fas").removeClass("far");
 }
+
 
 
 function init() {
