@@ -1,5 +1,5 @@
 function leftClick() {
-  console.log("left-click")
+
   var activeImg = $('img.active');
   activeImg.removeClass("active");
 
@@ -45,7 +45,7 @@ function updateDots() {
       }
     }
 
-    console.log(activeInd);
+
 
     var oldBot = $('.direct-link-wrapper > i.fas');
     oldBot.removeClass("fas").addClass("far");
@@ -55,14 +55,29 @@ function updateDots() {
         nextDot.addClass("fas").removeClass("far");
 }
 
+function dotClick() {
+  var me = $(this);
+  var meIndex = me.index();
 
+  var activeImg = $('img.active');
+  activeImg.removeClass("active");
+
+  var images = $('.picture-container > img');
+  var next = images.eq(meIndex);
+  next.addClass("active");
+  updateDots();
+}
 
 function init() {
   var leftPart = $('.left-part');
   var rightPart = $('.right-part');
+  var dots = $('.direct-link-wrapper > i');
 
   leftPart.click(leftClick);
   rightPart.click(rightClick);
+
+   dots.click(dotClick);
+
 }
 init();
 
