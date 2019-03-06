@@ -13,6 +13,7 @@ function leftClick() {
 
 
   prevImg.addClass("active");
+  updateDots();
 }
 
 
@@ -30,17 +31,30 @@ function rightClick() {
     nextImg = activeImg.next("img");
   }
   nextImg.addClass("active");
+  updateDots();
+}
+
+function updateDots() {
+
+  var images = $('.picture-container > img');
+  var activeInd;
+  for (var i = 0; i < images.length; i++) {
+      if (images.eq(i).hasClass("active")) {
+
+        activeInd = i;
+      }
+    }
+
+    console.log(activeInd);
 }
 
 
-
-
 function init() {
-var leftPart = $('.left-part');
-var rightPart = $('.right-part');
+  var leftPart = $('.left-part');
+  var rightPart = $('.right-part');
 
-leftPart.click(leftClick);
-rightPart.click(rightClick);
+  leftPart.click(leftClick);
+  rightPart.click(rightClick);
 }
 init();
 
