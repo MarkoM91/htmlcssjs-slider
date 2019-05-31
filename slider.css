@@ -5,16 +5,14 @@
   padding: 0;
 }
 
-
 .container{
-
 
   display: flex;
   flex-direction: row;
+
   width: 100vw;
   height: 100vh;
   padding: 20px;
-
 }
 
 .container > *{
@@ -25,19 +23,20 @@
 .wrapper{
   width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: row;
 }
-
-
 
 div.left-part {
 
   width: 10%;
   height: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 50px;
   color: rgba(6, 0, 5, 0.58);
 }
@@ -46,25 +45,27 @@ div.left-part {
 
   width: 10%;
   height: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 50px;
   color: rgba(6, 0, 5, 0.58)
 }
 
 div.middle-part{
 
-
-width: 80%;
-display: flex;
-flex-direction: column;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 .picture-container{
 
   width: 100%;
   height: 85%;
+
   background: white;
   display: flex;
   align-items: center;
@@ -75,6 +76,7 @@ flex-direction: column;
 
   max-width: 90%;
   max-height: 70%;
+
   background: white;
   border-radius: 20px;
   display: none;
@@ -89,13 +91,15 @@ flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
   height: 15%;
+
   font-size: 40px;
   color: rgba(6, 0, 5, 0.58);
 }
 
 .direct-link-wrapper > i{
 
-cursor: pointer; 
+cursor: pointer;
 }

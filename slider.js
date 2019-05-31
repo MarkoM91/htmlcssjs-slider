@@ -5,12 +5,11 @@ function leftClick() {
 
   var prevImg;
   var prevImg = activeImg.prev("img");
+
   if (activeImg.hasClass("first")) {
 
    prevImg = $("img.last");
  }
-
-
 
   prevImg.addClass("active");
   updateDots();
@@ -37,6 +36,7 @@ function rightClick() {
 function updateDots() {
 
   var images = $('.picture-container > img');
+
   var activeInd;
   for (var i = 0; i < images.length; i++) {
       if (images.eq(i).hasClass("active")) {
@@ -45,14 +45,13 @@ function updateDots() {
       }
     }
 
+  var oldBot = $('.direct-link-wrapper > i.fas');
+  oldBot.removeClass("fas").addClass("far");
 
+  var dots = $('.direct-link-wrapper > i');
 
-    var oldBot = $('.direct-link-wrapper > i.fas');
-    oldBot.removeClass("fas").addClass("far");
-
-    var dots = $('.direct-link-wrapper > i');
-    var nextDot = dots.eq(activeInd);
-        nextDot.addClass("fas").removeClass("far");
+  var nextDot = dots.eq(activeInd);
+  nextDot.addClass("fas").removeClass("far");
 }
 
 function dotClick() {
@@ -65,6 +64,7 @@ function dotClick() {
   var images = $('.picture-container > img');
   var next = images.eq(meIndex);
   next.addClass("active");
+
   updateDots();
 }
 
@@ -76,9 +76,7 @@ function init() {
   leftPart.click(leftClick);
   rightPart.click(rightClick);
 
-   dots.click(dotClick);
-
+  dots.click(dotClick);
 }
-init();
 
 $(document).ready(init);
